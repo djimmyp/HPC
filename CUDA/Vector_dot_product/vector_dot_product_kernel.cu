@@ -28,8 +28,8 @@ __global__ void vector_dot_product_kernel(float* P, const float* A, const float*
 	while ( i != 0 ) 
 	{
 		
-		if ( threadIdx.x < i ) {
-		
+		if ( threadIdx.x < i ) 
+		{
 			thread_sums[threadIdx.x] += thread_sums[ threadIdx.x + i ];
 		}
 		__syncthreads();
